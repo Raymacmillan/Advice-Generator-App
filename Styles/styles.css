@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes moveBall {
+    0%{
+        transform: translateY(0);
+    }25%{
+        transform: translateY(-15px);
+    }50%{
+        transform: translateY(0);
+    }75%{
+        transform: translateY(15px);
+    }100%{
+        transform: translateY(0);
+    }
+}
+
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    padding: 15px;
+
+    background: hsl(218, 23%, 16%);
+}
+
+.advice_container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    width: 100%;
+
+    border-radius: 8px;
+
+    padding: 25px;
+
+    background: hsl(217, 19%, 24%);
+}
+
+h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    color:  hsl(150, 100%, 66%);
+
+    margin-bottom: 25px;
+}
+
+q {
+    font-size: 18px;
+    color: hsl(193, 38%, 86%);
+
+    
+    font-family: 'Manrope', sans-serif;
+}
+
+.hideQuote {
+    display: none;
+}
+
+.images  {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.images div:last-child img {
+    width: 25px;
+    height: 25px;
+}
+
+.images div:first-child {
+    margin: 30px 0 25px;
+} 
+
+.btn {
+    outline: none;
+    border: none;
+    background: transparent;
+
+    height: 50px;
+    width: 50px;
+
+    cursor: pointer;
+
+    transition: all ease ease-in-out 200ms;
+}
+
+.images div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+
+    position: absolute;
+    bottom: 0;
+
+    transform: translateY(50%);
+   
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    background:  hsl(150, 100%, 66%);
+}
+
+
+.btn:hover {
+  box-shadow: 1px 1px 20px rgba(82, 255, 168, 0.6);
+}
+
+.loader {
+    display: flex;
+    place-content: center;
+
+    width: 100%;
+}
+
+.hideLoader{
+    display: none;
+}
+
+.loader div {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: hsl(193, 38%, 86%);
+}
+
+.loader div {
+    animation: moveBall 1.2s linear infinite;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+
+@media (min-width: 768px) {
+    .advice_container {
+        width: 400px;
+    }
+
+    
+}
+
